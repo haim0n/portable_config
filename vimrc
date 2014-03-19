@@ -9,19 +9,6 @@ set incsearch
 set noerrorbells
 set novisualbell 
 
-" ==================================
-"              MOLOKAI AUTO INSTALL
-" "=================================
-let iCanHazMolokai=1
-let molokai_file=expand('~/.vim/colors/molokai.vim')
-if !filereadable(molokai_file)
-    echo "Installing Molokai color theme.."
-    echo ""
-    silent !mkdir -p ~/.vim/colors
-    silent !wget -P ~/.vim/colors https://raw.github.com/tomasr/molokai/master/colors/molokai.vim 
-    let iCanHazMolokai=0
-endif
-
 " Color Scheme
 if has ('gui_running')
         colorscheme koehler
