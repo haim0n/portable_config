@@ -123,9 +123,6 @@ endif
 " "=================================
 filetype plugin indent on "This line must exist after vundle configuration
 
-" Verilog Module Find
-"map ` ma?^\s*\<module\><CR>Wyiw'a:echo "module -->" @0<CR>
- 
 " BuffExplorer
 map <C-b> :BufExplorer<CR>
  
@@ -150,14 +147,7 @@ let g:Powerline_symbols = 'fancy'
 "map <C-p> :CtrlPMRU<CR>
 let g:ctrlp_cmd = 'CtrlPMRU'
 
-" Unimpaired
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
- 
+
 " Indentation Commands
 nmap <D-[> <<
 nmap <D-]> >>
@@ -226,12 +216,6 @@ let g:pymode_doc_key = 'K'
 let g:pymode_lint = 1"let g:vim_debug_disable_mappings = 1
 let g:pymode_rope_rename_bind = '<C-c>rr'
 
-"Use Ctrl+Return to rotate between windows
-nnoremap <C-> <C-w><C-w> 
-
-"Use Ctrl+Shift+Return to rotate between windows in reverse order
-nnoremap <C-S-> <C-w>W
-
 " New vertical split: ,s
 map <leader>s <C-w><C-v>
 
@@ -245,11 +229,9 @@ map <leader>S <C-w><C-s>
 map <C-w>> :30winc ><CR>
 map <C-w>< :30winc <<CR>
 
-" Rotate buffers in current window
-nnoremap <C-Tab> :bn<CR>
-
-" Rotate tabs
-nnoremap <C-\> :tabNext<CR>
+" function block jump
+map <C-Up> [m
+map <C-Down> ]m
 
 " Change current directory to the directory of the file in buffer
 "nmap
@@ -295,33 +277,11 @@ let g:pymode_folding = 0
 "nnoremap <C-h> <C-w>h
 "nnoremap <C-l> <C-w>l
 
-"Use Ctrl+Return to rotate between windows
-nnoremap <C-> <C-w><C-w> 
-
-"Use Ctrl+Shift+Return to rotate between windows in reverse order
-nnoremap <C-S-> <C-w>W
-
-" New vertical split: ,s
-map <leader>s <C-w><C-v>
-
-" New horizontal split: ,S
-map <leader>S <C-w><C-s>
-
-" Close split: ,q
-map <leader>q <C-w><C-q>
-
-" increase/decrease split window size
-map <C-w>> :30winc ><CR>
-map <C-w>< :30winc <<CR>
-
 " Rotate buffers in current window
 nnoremap <C-Tab> :bn<CR>
 
 " Rotate tabs
 nnoremap <C-\> :tabNext<CR>
-
-" Change current directory to the directory of the file in buffer
-"nmap <silent> <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
