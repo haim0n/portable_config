@@ -27,7 +27,7 @@ if has ('gui_running')
         colorscheme koehler
 	"let g:molokai_original = 1
         "syntax on
-	set guifont=Monospace\ 11
+	set guifont=Monospace\ 12
 else
         "colorscheme default
         colorscheme koehler
@@ -347,12 +347,12 @@ nnoremap <F3> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Complete UltiSnip snippets with <tab>
 function! g:UltiSnips_Complete()
-    call UltiSnips_ExpandSnippet()
+    call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
         if pumvisible()
             return "\<C-n>"
         else
-            call UltiSnips_JumpForwards()
+            call UltiSnips#JumpForwards()
             if g:ulti_jump_forwards_res == 0
                return "\<TAB>"
             endif
