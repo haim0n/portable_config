@@ -233,6 +233,11 @@ map <C-w>< :30winc <<CR>
 map <C-Up> [m
 map <C-Down> ]m
 
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+
 " Change current directory to the directory of the file in buffer
 "nmap
 let g:pymode_lint_checker = "pyflakes,pep8"
