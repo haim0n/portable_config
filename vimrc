@@ -95,7 +95,7 @@ endif
 	Bundle 'TaskList.vim'
 	Bundle 'https://github.com/reinh/vim-makegreen'
 	Bundle 'https://github.com/rosenfeld/conque-term'
-	Bundle 'powerman/vim-plugin-viewdoc'
+	"""Bundle 'powerman/vim-plugin-viewdoc'
 	"Bundle 'https://github.com/brandonbloom/vim-proto'
 
 	" C bundles
@@ -103,7 +103,7 @@ endif
 	" YouCompleteMe needs special manual install that is LONG but well
 	" explained in https://github.com/Valloric/YouCompleteMe
 	" Be sure to also change the compilation flags according to your
-	" project (instruction in YCM documentation
+	" Project (instruction in YCM documentation
 	Bundle 'Valloric/YouCompleteMe'
 	
 	" Improved C syntax highlighting - highlights user defined functions
@@ -195,7 +195,8 @@ nmap <leader>a <Esc>:Ack!
 
 " Python-mode
 " Activate rope
-let g:pymode_rope = 1
+ let g:pymode_rope = 1
+ let g:pymode_rope_lookup_project = 0
 " Keys:
 " K             Show python docs
 " <Ctrl-Space>  Rope autocomplete
@@ -214,7 +215,7 @@ let g:pymode_doc_key = 'K'
 
 "Linting
 let g:pymode_lint = 1"let g:vim_debug_disable_mappings = 1
-let g:pymode_rope_rename_bind = '<C-c>rr'
+" let g:pymode_rope_rename_bind = '<C-c>rr'
 
 " New vertical split: ,s
 map <leader>s <C-w><C-v>
@@ -362,3 +363,7 @@ iab retrun return
 " noremap xx dd
 " noremap d "_d
 " noremap dd "_dd
+
+
+:set listchars=tab:☠\ ,eol:¬
+:map \l :set list!<CR>
