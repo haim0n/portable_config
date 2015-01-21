@@ -367,3 +367,4 @@ iab retrun return
 
 :set listchars=tab:☠\ ,eol:¬
 :map \l :set list!<CR>
+:set nomousehide
