@@ -9,12 +9,11 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-title(){
-  ORIG=$PS1
-  TITLE="\e]2;$@\a"
-  PS1=${ORIG}${TITLE}
+function set-title () {
+    export PREV_COMMAND=${PREV_COMMAND}${@}
+        echo -ne "\033]0;${PREV_COMMAND}\007"
+	    export PREV_COMMAND=${PREV_COMMAND}' | '
 }
-
 export EDITOR=/usr/bin/vim
 
 # git prompt stuff
