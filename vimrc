@@ -71,7 +71,6 @@ endif
 	" Python bundles
 	Bundle 'indentpython.vim'
 	Bundle 'klen/python-mode'
-	Bundle 'pyflakes.vim'
 	"Bundle 'pydoc.vim'
 	Bundle 'pep8'
 	"Bundle 'pytest.vim' - did not use it so far
@@ -241,7 +240,7 @@ nmap <S-Right> v<Right>
 
 " Change current directory to the directory of the file in buffer
 "nmap
-let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_checker = "pep8"
 " Auto check on save
 let g:pymode_lint_write = 1
 
