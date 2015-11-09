@@ -17,7 +17,7 @@ function set-title () {
 export EDITOR=/usr/bin/vim
 
 # git prompt stuff
-GIT_PROMPT=/usr/share/doc/git/contrib/completion/git-prompt.sh
+GIT_PROMPT=/usr/share/git-core/contrib/completion/git-prompt.sh
 if [ -f $GIT_PROMPT ]; then
    . $GIT_PROMPT
 fi
