@@ -7,6 +7,9 @@
   edit_tab_title = <Primary><Alt>a
   edit_terminal_title = <Primary><Alt>x
   edit_window_title = <Primary><Alt>w
+  group_all = ""
+  group_tab = None
+  group_tab_toggle = <Super>t
   switch_to_tab_1 = <Alt>1
   switch_to_tab_2 = <Alt>2
   switch_to_tab_3 = <Alt>3
