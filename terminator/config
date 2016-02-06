@@ -1,5 +1,5 @@
 [global_config]
-  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  enabled_plugins = CustomCommandsMenu, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   hide_from_taskbar = True
   inactive_color_offset = 1.0
   title_font = DejaVu Sans Mono Bold 12
@@ -29,7 +29,6 @@
   [[default]]
     [[[child0]]]
       fullscreen = False
-      last_active_term = b4dd8618-2f8f-4163-9fe1-a36b58f59714
       last_active_window = True
       maximised = True
       order = 0
@@ -38,16 +37,78 @@
       size = 1920, 1016
       title = /bin/bash
       type = Window
-    [[[terminal1]]]
+    [[[child1]]]
+      active_page = 2
+      labels = my_env, sfc, rbac, superfluidity
+      last_active_term = b4dd8618-2f8f-4163-9fe1-a36b58f59714, f19dccd7-0b79-411c-826d-d5d82e3fcca1, 27b36a69-99f7-4e78-9661-cff9131b8158, 7e2bbd81-030d-4ae3-adab-2c3a6417fcbf
       order = 0
       parent = child0
+      type = Notebook
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 491
+      ratio = 0.499493927126
+      type = VPaned
+    [[[child6]]]
+      order = 2
+      parent = child1
+      position = 491
+      ratio = 0.499493927126
+      type = VPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
       profile = default
+      title = my_env
       type = Terminal
       uuid = b4dd8618-2f8f-4163-9fe1-a36b58f59714
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = bd02d795-2945-48a6-b736-07b21e6abac8
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = f19dccd7-0b79-411c-826d-d5d82e3fcca1
+    [[[terminal7]]]
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 27b36a69-99f7-4e78-9661-cff9131b8158
+    [[[terminal8]]]
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = e8250e21-d388-4ba8-bb69-ba4ea8bb00a3
+    [[[terminal9]]]
+      order = 3
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 7e2bbd81-030d-4ae3-adab-2c3a6417fcbf
 [plugins]
+  [[CustomCommandsMenu]]
+    [[[stack@10.35.6.169]]]
+      command = ssh stack@10.35.6.169
+      enabled = True
+      name = stack@10.35.6.169
+      position = 0
+    [[[stack@10.35.6.170]]]
+      command = ssh stack@10.35.6.170
+      enabled = True
+      name = stack@10.35.6.170
+      position = 1
 [profiles]
   [[default]]
     background_image = None
+    cursor_color = "#00ff00"
     font = DejaVu Sans Mono 12
     foreground_color = "#00ff00"
     scrollback_infinite = True
