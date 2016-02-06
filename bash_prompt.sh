@@ -80,7 +80,7 @@ function set_bash_prompt () {
   set_git_branch
 
   # Set the bash prompt variable.
-  PS1="${PYTHON_VIRTUALENV}\u@\h$\W${BRANCH}${PROMPT_SYMBOL} "
+  PS1="${PYTHON_VIRTUALENV}\u@\h \W${BRANCH}${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
