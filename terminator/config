@@ -1,7 +1,6 @@
 [global_config]
   title_hide_sizetext = True
   title_transmit_bg_color = "#3ebe34"
-  hide_from_taskbar = True
   inactive_color_offset = 1.0
   enabled_plugins = CustomCommandsMenu, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
 [keybindings]
