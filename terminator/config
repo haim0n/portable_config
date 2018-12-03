@@ -6,11 +6,13 @@
   title_transmit_bg_color = "#3ebe34"
 [keybindings]
   broadcast_all = None
-  broadcast_group = <Primary><Alt>g
-  broadcast_off = <Primary><Shift>g
+  broadcast_group = None
+  broadcast_off = None
   edit_window_title = <Primary><Alt>w
   group_all = ""
-  group_tab = <Primary>b
+  group_all_toggle = <Super>g
+  group_tab = <Alt>b
+  group_tab_toggle = None
   switch_to_tab_1 = <Alt>1
   switch_to_tab_2 = <Alt>2
   switch_to_tab_3 = <Alt>3
@@ -21,7 +23,7 @@
   switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
   ungroup_all = None
-  ungroup_tab = <Primary><Shift>b
+  ungroup_tab = None
 [layouts]
   [[default]]
     [[[child0]]]
@@ -48,9 +50,7 @@
       position = 1
 [profiles]
   [[default]]
-    background_image = None
     cursor_color = "#00ff00"
-    font = DejaVu Sans Mono 12
+    font = Ubuntu Mono 13
     foreground_color = "#00ff00"
-    scrollback_infinite = True
-    use_system_font = False
+    scrollback_lines = 5000
