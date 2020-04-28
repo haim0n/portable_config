@@ -79,10 +79,8 @@ function set_bash_prompt () {
   # Set the BRANCH variable.
   set_git_branch
 
-  # Set the bash prompt variable.
-  if [ -z $MAGEN_TOP ]; then
-    export PS1="${PYTHON_VIRTUALENV}\u@\h \W${BRANCH}${PROMPT_SYMBOL} "
-  fi
+  export PS1='${PYTHON_VIRTUALENV}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]${BRANCH}${PROMPT_SYMBOL} '
+
 }
 
 PROMPT_COMMAND=set_bash_prompt
