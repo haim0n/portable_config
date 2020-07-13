@@ -48,6 +48,14 @@ function set_git_branch() {
   BRANCH="${branch} "
 }
 
+function set_active_conda_env() {
+  if  [ -z $CONDA_DEFAULT_ENV ]; then
+    CONDA_STR=""
+  else
+    CONDA_STR="($CONDA_DEFAULT_ENV)"
+  fi
+}
+
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
@@ -79,7 +87,10 @@ function set_bash_prompt () {
   # Set the BRANCH variable.
   set_git_branch
 
-  export PS1='${PYTHON_VIRTUALENV}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]${BRANCH}${PROMPT_SYMBOL} '
+  # Set the CONDA_STR variable
+  set_active_conda_env
+  
+  export PS1='${CONDA_STR}${PYTHON_VIRTUALENV}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]${BRANCH}${PROMPT_SYMBOL} '
 
 }
 
